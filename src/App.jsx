@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
+          <Route path="/" element={<Resources category="HTML" />} />
           <Route path="/html" element={<Resources category="HTML" />} />
           <Route path="/css" element={<Resources category="CSS" />} />
           <Route path="/javascript" element={<Resources category="JavaScript" />} />
