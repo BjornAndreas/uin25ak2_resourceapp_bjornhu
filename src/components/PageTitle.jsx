@@ -1,5 +1,5 @@
-function PageTitle({ title }) {
-    return <h1>{title}</h1>;
-  }
-  
-  export default PageTitle;
+import "../styles/PageTitle.scss";
+
+export default function PageTitle({ title }) {
+  return <h1>{title}</h1>;
+}

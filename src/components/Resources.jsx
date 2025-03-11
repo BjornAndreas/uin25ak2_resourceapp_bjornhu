@@ -1,28 +1,24 @@
-import resources from "./ressurser"; 
+import PageTitle from "./PageTitle";
+import resources from "./ressurser";
+import "../styles/resources.scss";
 
-function Resources({ category }) {
-    // Filtrerer ressursene basert på category
-    const filteredResources = resources.filter(resource => resource.category.toLowerCase() === category.toLowerCase());
-  
-    // Hvis ingen matching ressurser ble funnet, vis en feilmelding
-    if (filteredResources.length === 0) {
-      return <p>No resources found for this category: {category}</p>;
-    }
-  
-    return (
-      <section>
-        <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2> {/* Vist i menneskelig lesbar format */}
-        <ul>
-          {filteredResources.map((resource, index) => (
-            <li key={index}>
-              <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                {resource.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    );
-  }
-  
-  export default Resources;
+export default function Resources({ category }) {
+  const filterRessurser = resources.filter(ressurs => ressurs.category === category);
+
+  return (
+    <section>
+      <PageTitle title={category} />
+
+      <ul>
+        {filterRessurser.map(ressurs => (
+          <li key={ressurs.url}>
+            <h2>{ressurs.title}</h2> {/* Viser tittelen fra ressurser.js */}
+            <a href={ressurs.url} target="_blank" rel="noopener noreferrer">
+              {ressurs.url}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

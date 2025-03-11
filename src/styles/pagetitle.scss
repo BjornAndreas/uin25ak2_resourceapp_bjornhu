@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --white: #fff;
+    --gray: #E1E5EE;
+    --blue: #58699D;
+    --darkblue: #2A324B;
+}
+
+main h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--darkblue);
+}

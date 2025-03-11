@@ -1,21 +1,21 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Resources from "./components/Resources";
 import PageTitle from "./components/PageTitle";
-import Layout from "./components/Layout";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <Router>
-      <Layout>
+      <Nav>
         <Routes>
-          <Route path="/" element={<Resources category="HTML" />} />
-          <Route path="/html" element={<Resources category="HTML" />} />
-          <Route path="/css" element={<Resources category="CSS" />} />
-          <Route path="/javascript" element={<Resources category="JavaScript" />} />
-          <Route path="/react" element={<Resources category="React" />} />
-          <Route path="/sanity" element={<Resources category="Headless-Cms" />} />
+          <Route path="/" element={<Resources category="html" />} />
+          <Route path="/html" element={<Resources category="html" />} />
+          <Route path="/css" element={<Resources category="css" />} />
+          <Route path="/javascript" element={<Resources category="javascript" />} />
+          <Route path="/react" element={<Resources category="react" />} />
+          <Route path="/sanity" element={<Resources category="headless-cms" />} />
         </Routes>
-      </Layout>
+      </Nav>
     </Router>
   );
 }
