@@ -11,11 +11,23 @@
     display: flex;
     list-style: none;
     width: 100%;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+#nav-tabs li a {
+    display: block;
+    color: var(--white);
 }
 
 #nav-tabs li {
     padding: 15px 32px;
     cursor: pointer;
     background-color: var(--darkblue);
+    justify-content: space-between;
+}
+
+#nav-tabs li :hover {
+color: var(--gray);
 }
